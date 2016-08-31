@@ -46,7 +46,7 @@ describe('zeller', () => {
 			isFunction(getDayOfWeek)
 		})
 		it('should return day number', () => {
-			strictEqual(getDayOfWeek(2), 1)
+			strictEqual(getDayOfWeek(2016, 8, 1), 1)
 		})
 	})
 })
@@ -166,7 +166,7 @@ describe('Feb 2100', ()=>{
 	it.skip('should have 28 days', ()=>{
 
 	})
-	it.skip('should be a non-leap century', () =. {
+	it.skip('should be a non-leap century', () => {
 
 	})
 	it.skip('should have 5 weeks', ()=>{
@@ -184,7 +184,7 @@ describe('Feb 2000', ()=>{
 	it.skip('should have 29 days', ()=>{
 
 	})
-	it.skip('should be a leap century', () =. {
+	it.skip('should be a leap century', () => {
 
 	})
 	it.skip('should have 5 weeks', ()=>{
