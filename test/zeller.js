@@ -47,6 +47,7 @@ describe('zeller', () => {
 		})
 		it('should return day number', () => {
 			strictEqual(getDayOfWeek(2016, 8, 1), 1)
+			strictEqual(getDayOfWeek(2016, 8), 1)
 		})
 	})
 })
