@@ -2,7 +2,7 @@
 
 const {exec} = require('child_process');
 const {assert: {isFunction, strictEqual, isArray}} = require('chai');
-const {getDayOfWeek, getMonth, getYear, monthName, weekStart, monthCalc, yearCalc, monthBuild, monthDays} = require('../lib/zeller')
+const {getDayOfWeek, getMonth, getYear, monthName, weekStart, monthCalc, yearCalc, monthBuild, monthDays, monthSlice} = require('../lib/zeller')
 
 // describe ('zeller', () => {
 // 	it('should be a function', () => {
