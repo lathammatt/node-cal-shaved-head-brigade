@@ -1,8 +1,8 @@
 "use strict";
 
 const {exec} = require('child_process');
-const {assert: {isFunction, strictEqual}} = require('chai');
-const {getDayOfWeek, getMonth, getYear} = require('../lib/zeller')
+const {assert: {isFunction, strictEqual, isObject}} = require('chai');
+const {getDayOfWeek, getMonth, getYear, monthName, weekStart, monthCalc, yearCalc} = require('../lib/zeller')
 
 // describe ('zeller', () => {
 // 	it('should be a function', () => {
@@ -29,6 +29,21 @@ describe('zeller', () => {
 		})
 	})
 
+	describe('monthtitle', () => {
+		it('should be a function', () => {
+			isFunction(monthName)
+		})
+		it('should display desired month', () => {
+			strictEqual(monthName(2000,1), '    January 2000\nSu Mo Tu We Th Fr Sa' )
+		})
+		it('should display desired year', () => {
+			strictEqual(monthName(1990,6), '    June 1990\nSu Mo Tu We Th Fr Sa' )
+		})
+		it('should display days of the week', () => {
+			strictEqual(monthName(2014,12), '    December 2014\nSu Mo Tu We Th Fr Sa' )
+		})
+	})
+
 	describe('year', () => {
 		it('should be a function', ()=> {
 			isFunction(getYear)
@@ -41,16 +56,49 @@ describe('zeller', () => {
 		})
 	})
 
+	describe('month calculation', () => {
+		it('should be a function', () => {
+			isFunction(monthCalc)
+		})
+		it('should return a number', () => {
+			strictEqual(monthCalc(1),36)
+			strictEqual(monthCalc(12),33)
+			strictEqual(monthCalc(3),10)
+		})
+	})
+
+	describe('year calculation', () => {
+		it('should be a function', () => {
+			isFunction(yearCalc)
+		})
+		it('should return a number', () => {
+			strictEqual(yearCalc(2000, 1),2483)
+			strictEqual(yearCalc(1990, 3),2472)
+			strictEqual(yearCalc(2014, 3),2502)
+
+		})
+	})
+
 	describe('getDayOfWeek', () => {
 		it('should be a function', () => {
 			isFunction(getDayOfWeek)
 		})
-		it('should return day number', () => {
+		it('should return a number', () => {
 			strictEqual(getDayOfWeek(2016, 8, 1), 1)
 			strictEqual(getDayOfWeek(2016, 8), 1)
 		})
 	})
+
+	describe('week start', () => {
+		it('should be a function', () => {
+			isFunction(weekStart)
+		})
+		it.skip('should')
+	})
 })
+
+
+
 
 describe('march 2016', ()=>{
 	it.skip('should be a function', ()=>{
