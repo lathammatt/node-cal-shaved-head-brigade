@@ -13,9 +13,6 @@ describe('zeller', () => {
 		it('should handle January', () => {
 			strictEqual(getMonth(1), 13)
 		})
-		it.skip('should allow a range of 1-12', () => {
-
-		})
 	})
 
 	describe('year', () => {
@@ -24,9 +21,6 @@ describe('zeller', () => {
 		})
 		it('should handle January', () => {
 			strictEqual(getYear(2000, 1), 1999)
-		})
-		it.skip('should allow a range of 1753-9999', ()=>{
-
 		})
 	})
 
@@ -38,6 +32,9 @@ describe('zeller', () => {
 			strictEqual(monthCalc(1),36)
 			strictEqual(monthCalc(12),33)
 			strictEqual(monthCalc(3),10)
+		})
+		it('return useage statement', () => {
+			strictEqual(monthCalc(), "Useage: month must be between 1 and 12")
 		})
 	})
 
