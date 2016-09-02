@@ -2,7 +2,7 @@
 
 const {exec} = require('child_process');
 const {assert: {isFunction, strictEqual, isArray}} = require('chai');
-const {getDayOfWeek, getMonth, getYear, monthName, weekStart, monthCalc, yearCalc, monthBuild, monthDays, monthSlice} = require('../lib/zeller')
+const {getDayOfWeek, getMonth, getYear, monthName, weekStart, monthCalc, yearCalc, monthBuild, monthDays, monthSlice, daysOfWeek} = require('../lib/zeller')
 
 // describe ('zeller', () => {
 // 	it('should be a function', () => {
@@ -34,13 +34,10 @@ describe('zeller', () => {
 			isFunction(monthName)
 		})
 		it('should display desired month', () => {
-			strictEqual(monthName(2000,1), '    January 2000\nSu Mo Tu We Th Fr Sa' )
+			strictEqual(monthName(2000,1), '    January 2000' )
 		})
 		it('should display desired year', () => {
-			strictEqual(monthName(1990,6), '    June 1990\nSu Mo Tu We Th Fr Sa' )
-		})
-		it('should display days of the week', () => {
-			strictEqual(monthName(2014,12), '    December 2014\nSu Mo Tu We Th Fr Sa' )
+			strictEqual(monthName(1990,6), '    June 1990' )
 		})
 	})
 
