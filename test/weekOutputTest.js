@@ -51,7 +51,7 @@ describe('days of week', () => {
 			isFunction(weekSix)
 		})
 		it('should output a string', () => {
-			strictEqual(weekSix(monthSlice(2016, 10)), "30 31                ")
+			strictEqual(weekSix(monthSlice(2016, 10)), '30 31          ')
 		})
 	})
 

@@ -81,7 +81,7 @@ describe('march 2016', ()=>{
 
 	})
 	it('should have 5 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2016, 3)), "")
+		strictEqual(weekSix(monthSlice(2016, 3)), '         ')
 	})
 })
 
@@ -95,7 +95,7 @@ describe('sept 2016', ()=>{
 
 	})
 	it('should have 5 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2016, 9)), '         ')
+		strictEqual(weekSix(monthSlice(2016, 9)), '            ')
 	})
 })
 
@@ -107,7 +107,7 @@ describe('feb 2016', ()=>{
 		strictEqual(weekFive(monthSlice(2016, 2)), "28 29               ")
 	})
 	it('should have 5 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2016, 2)), '')
+		strictEqual(weekSix(monthSlice(2016, 2)), '   ')
 	})
 })
 
@@ -117,11 +117,11 @@ describe('feb 2017', ()=>{
 
 	})
 	it('should have 28 days', ()=>{
-		strictEqual(weekFive(monthSlice(2017, 2)), "26 27 28          ")
+		strictEqual(weekFive(monthSlice(2017, 2)), '26 27 28             ')
 
 	})
 	it('should have 5 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2017, 2)), "")
+		strictEqual(weekSix(monthSlice(2017, 2)), '      ')
 
 	})
 })
@@ -136,8 +136,8 @@ describe('Feb 2015', ()=>{
 
 	})
 	it('should have 4 weeks', ()=>{
-		strictEqual(weekFive(monthSlice(2015, 2)), "")
-		strictEqual(weekSix(monthSlice(2015, 2)), "")
+		strictEqual(weekFive(monthSlice(2015, 2)), '                     ')
+		strictEqual(weekSix(monthSlice(2015, 2)), '   ')
 
 	})
 })
@@ -148,11 +148,11 @@ describe('january 2016', ()=>{
 
 	})
 	it('should have 31 days', ()=>{
-		strictEqual(weekSix(monthSlice(2016, 1)), '31                ')
+		strictEqual(weekSix(monthSlice(2016, 1)), '31             ')
 
 	})
 	it('should have 6 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2016, 1)), '31                ')
+		strictEqual(weekSix(monthSlice(2016, 1)), '31             ')
 
 	})
 })
@@ -163,11 +163,11 @@ describe('April 2017', ()=>{
 
 	})
 	it('should have 30 days', ()=>{
-		strictEqual(weekSix(monthSlice(2017, 4)), "30                   ")
+		strictEqual(weekSix(monthSlice(2017, 4)), '30             ')
 
 	})
 	it('should have 6 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2017, 4)), "30                   ")
+		strictEqual(weekSix(monthSlice(2017, 4)), '30             ')
 
 	})
 })
@@ -185,7 +185,7 @@ describe('Feb 1900', ()=>{
 
 	})
 	it('should have 5 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(1900, 2)), '   ')
+		strictEqual(weekSix(monthSlice(1900, 2)), '         ')
 
 	})
 })
@@ -203,7 +203,7 @@ describe('Feb 2000', ()=>{
 
 	})
 	it('should have 5 weeks', ()=>{
-		strictEqual(weekSix(monthSlice(2000, 2)), "")
+		strictEqual(weekSix(monthSlice(2000, 2)), '      ')
 
 	})
 })
